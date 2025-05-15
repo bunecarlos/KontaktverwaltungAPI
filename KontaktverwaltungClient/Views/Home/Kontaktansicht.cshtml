@@ -1,0 +1,28 @@
+﻿@using KontaktverwaltungLibrary.Models
+
+@model Kontakt
+
+  
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+        <h5 class="card-title">@Model.Vorname @Model.Nachname</h5>
+        <p class="card-text mb-1"><strong>Adresse:</strong> @Model.Adresse</p>
+        <p class="card-text mb-1"><strong>Ort:</strong> @Model.Postleitzahl – @Model.Ort</p>
+        <p class="card-text mb-1"><strong>Telefon:</strong> @Model.Telefon</p>
+        <p class="card-text"><strong>E-Mail:</strong> @Model.Mail</p>
+                
+                <form asp-action="KontaktUpdate" asp-controller="Home" method="get">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="btn btn-warning">Kontakt bearbeiten</button>
+                </form>
+                <form asp-action="KontaktEntfernen" asp-controller="Home" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Kontakt löschen</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+

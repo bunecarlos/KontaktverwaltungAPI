@@ -1,0 +1,41 @@
+﻿@model KontaktverwaltungLibrary.Models.Kontakt
+
+<center><h1>Kontakt bearbeiten</h1></center>
+
+<form asp-action="KontaktUpdate" method="post" class="container mt-4">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Vorname" class="form-label">Vorname</label>
+        <input asp-for="Vorname" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Nachname" class="form-label">Nachname</label>
+        <input asp-for="Nachname" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Geschlecht" class="form-label">Geschlecht</label>
+        <input asp-for="Geschlecht" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Adresse" class="form-label">Adresse</label>
+        <input asp-for="Adresse" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Postleitzahl" class="form-label">Postleitzahl</label>
+        <input asp-for="Postleitzahl" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Ort" class="form-label">Ort</label>
+        <input asp-for="Ort" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Telefon" class="form-label">Telefon</label>
+        <input asp-for="Telefon" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Mail" class="form-label">E-Mail</label>
+        <input asp-for="Mail" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Änderungen speichern</button>
+</form>

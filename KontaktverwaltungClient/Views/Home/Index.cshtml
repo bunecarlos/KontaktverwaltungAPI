@@ -1,0 +1,32 @@
+﻿@using KontaktverwaltungLibrary.Models
+@model IEnumerable<Kontakt>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Alle Kontakte</h1>
+
+    @foreach (var kontakt in Model)
+    {
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">@kontakt.Vorname @kontakt.Nachname</h5>
+                <p class="card-text mb-1"><strong>Adresse:</strong> @kontakt.Adresse</p>
+                <p class="card-text mb-1"><strong>Ort:</strong> @kontakt.Postleitzahl – @kontakt.Ort</p>
+                <p class="card-text mb-1"><strong>Telefon:</strong> @kontakt.Telefon</p>
+                <p class="card-text"><strong>E-Mail:</strong> @kontakt.Mail</p>
+                <form asp-action="Kontaktansicht" asp-controller="Home" method="post">
+                    <input type="hidden" name="id" value="@kontakt.Id" />
+                    <button type="submit" class="btn btn-info">Kontakt ansehen</button>
+                </form>
+                <form asp-action="KontaktEntfernen" asp-controller="Home" method="post">
+                    <input type="hidden" name="id" value="@kontakt.Id" />
+                    <button type="submit" class="btn btn-danger">Kontakt löschen</button>
+                </form>
+             
+            </div>
+        </div>
+    }
+</div>

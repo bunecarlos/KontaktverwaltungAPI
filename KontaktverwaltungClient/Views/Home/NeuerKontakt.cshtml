@@ -1,0 +1,39 @@
+﻿@model KontaktverwaltungLibrary.Models.Kontakt
+<center><h1>Neuer Kontakt</h1></center>
+
+<form asp-action="NeuerKontakt" method="post" class="container mt-4">
+    <div class="mb-3">
+        <label asp-for="Vorname" class="form-label" >Vorname</label>
+        <input asp-for="Vorname" class="form-control" id="vorname" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Nachname" class="form-label">Nachname</label>
+        <input asp-for="Nachname" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Geschlecht" class="form-label" >Geschlecht</label>
+        <input asp-for="Geschlecht" class="form-control" id="geschlecht" />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Adresse" class="form-label">Adresse</label>
+        <input asp-for="Adresse" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Postleitzahl" class="form-label">Postleitzahl</label>
+        <input asp-for="Postleitzahl" class="form-control" id="plz"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Ort" class="form-label">Ort</label>
+        <input asp-for="Ort" class="form-control" id="ort"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Telefon" class="form-label">Telefon</label>
+        <input asp-for="Telefon" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Mail" class="form-label">E-Mail</label>
+        <input asp-for="Mail" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Absenden</button>
+</form>

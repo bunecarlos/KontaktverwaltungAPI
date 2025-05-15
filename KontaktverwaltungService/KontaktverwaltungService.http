@@ -1,0 +1,6 @@
+@KontaktverwaltungService_HostAddress = http://localhost:5027
+
+GET {{KontaktverwaltungService_HostAddress}}api/kontaktverwaltung
+Accept: application/json
+
+###
